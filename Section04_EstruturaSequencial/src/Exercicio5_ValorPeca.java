@@ -6,16 +6,14 @@ public class Exercicio5_ValorPeca {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int codPeca1, codPeca2, qntdPeca1, qntdPeca2;
+		int qntdPeca1, qntdPeca2;
 		double valorPeca1, valorPeca2, total;
 		
-		codPeca1 = sc.nextInt();
 		qntdPeca1 = sc.nextInt();
 		valorPeca1 = sc.nextDouble();
 		
 		sc.nextLine();
 		
-		codPeca2 = sc.nextInt();
 		qntdPeca2 = sc.nextInt();
 		valorPeca2 = sc.nextDouble();
 		
