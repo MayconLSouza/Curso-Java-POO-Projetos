@@ -42,6 +42,8 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - **Seção 9**: Construtores, palavra this, sobrecarga, encapsulamento
 - **Seção 10**: Comportamento de memória, arrays, listas
 - **Seção 12**: Enumeração, composição
+- **Seção 13**: Herança e polimorfismo
+- **Seção 14**: Tratamento de exceções
 
 ## Tecnologias 
 
