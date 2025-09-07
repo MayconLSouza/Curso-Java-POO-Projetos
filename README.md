@@ -17,12 +17,6 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - Tratamento de exceções
 - Generics
 
-### Estruturas de Dados
-- Arrays e coleções
-- Manipulação de arquivos
-- Programação funcional e expressões lambda
-- Stream API
-
 ### Frameworks e Ferramentas
 - JDBC (SQL)
 - JavaFX (Interface gráfica)
@@ -44,12 +38,13 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - **Seção 12**: Enumeração, composição
 - **Seção 13**: Herança e polimorfismo
 - **Seção 14**: Tratamento de exceções
+- **Seção 15**: Trabalhando com arquivos
 
 ## Tecnologias 
 
 - Java 17
-- Eclipse IDE
-- Git/GitHub
+- Git
+- UML
 
 ## Professor
 
