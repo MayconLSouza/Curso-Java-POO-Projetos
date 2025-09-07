@@ -39,6 +39,7 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - **Seção 13**: Herança e polimorfismo
 - **Seção 14**: Tratamento de exceções
 - **Seção 15**: Trabalhando com arquivos
+- **Seção 16**: Interfaces
 
 ## Tecnologias 
 
