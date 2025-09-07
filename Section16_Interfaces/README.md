@@ -1,0 +1,5 @@
+A company wants to automatize the processing of its contract. Processing a contract consists of generating the installments to be paid for that contract, based on the desired number of months.
+
+The company uses an online payment service to make the installment payments. The online payment services typically charge a monthly interest as well as a fee per payment. For the time being, the service contracted by the company is the Paypal, which applies simple interest of 1% to each installment, plus a 2% payment fee.
+
+Create a program to read data from a contract (contract number, contract date and total contract value). Next, the program should read the number of months of the contract installments and thus generate a record of the installments to be paid (date and amount), with the first installment to be paid one month after the contract date, the second installment two months after the contract and so on. Show the installment data on the screen.
