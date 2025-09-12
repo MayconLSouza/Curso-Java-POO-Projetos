@@ -1,0 +1,2 @@
+When counting votes in an election, a number of voting logs are generated containing the candidate's name and the number of votes (.csv format) that he or she received in a ballot box. 
+You should make a program to read the voting records from a file, and then generate a consolidated report with the total votes for each candidate.
