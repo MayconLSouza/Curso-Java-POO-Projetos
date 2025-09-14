@@ -41,6 +41,7 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - **Seção 15**: Trabalhando com arquivos
 - **Seção 16**: Interfaces
 - **Seção 17**: Generics, Set e Map
+- **Seção 18**: Programação funcional e expressões lambda
 
 ## Tecnologias 
 
