@@ -33,3 +33,6 @@ local.properties
 
 # virtual machine crash logs
 hs_err_pid*
+
+# Database info
+db.properties
