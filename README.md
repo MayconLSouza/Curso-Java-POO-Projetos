@@ -57,4 +57,4 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 
 ## Link do curso
 
-- [Curso na Udemy](https://www.udemy.com/course/java-curso-completo/)
+[Java COMPLETO Programação Orientada a Objetos + Projetos](https://www.udemy.com/course/java-curso-completo/)
