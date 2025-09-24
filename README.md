@@ -44,7 +44,7 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - **Seção 18**: Programação funcional e expressões lambda
 - **Seção 19**: Acesso a banco de dados com JDBC e DAO (Data Access Object)
 - **Seção 20**: Git e GitHub
-- **Seção 21**: JPA
+- **Seção 21**: JPA e Hibernate
 
 ## Tecnologias & Ferramentas
 
