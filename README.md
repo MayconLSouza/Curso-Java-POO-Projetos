@@ -42,7 +42,7 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - **Seção 16**: Interfaces
 - **Seção 17**: Generics, Set e Map
 - **Seção 18**: Programação funcional e expressões lambda
-- **Seção 19**: Acesso a banco de dados com JDBC
+- **Seção 19**: Acesso a banco de dados com JDBC e DAO (Data Access Object)
 
 ## Tecnologias 
 
@@ -57,4 +57,4 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 
 ## Link do curso
 
-- [Curso na Udemy](https://www.udemy.com/course/java-curso-completo/)
+[Java COMPLETO Programação Orientada a Objetos + Projetos](https://www.udemy.com/course/java-curso-completo/)
