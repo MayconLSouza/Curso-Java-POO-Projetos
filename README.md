@@ -2,31 +2,6 @@
 
 Este repositório contém exercícios e projetos desenvolvidos durante o curso "Java COMPLETO 2023 Programação Orientada a Objetos + Projetos" do professor Nelio Alves na Udemy.
 
-## Conteúdo
-
-### Fundamentos
-- Lógica de programação e algoritmos
-- Sintaxe da linguagem Java
-- Estruturas de controle, condicionais e loops
-
-### Programação Orientada a Objetos
-- Classes, atributos e métodos
-- Construtores, sobrecarga, encapsulamento
-- Herança, polimorfismo, interfaces
-- Enumerações e composição
-- Tratamento de exceções
-- Generics
-
-### Frameworks e Ferramentas
-- JDBC (SQL)
-- JavaFX (Interface gráfica)
-- Git/Github
-- Spring Boot
-- JPA/Hibernate
-- Maven
-- Spring Data JPA
-- Spring Data MongoDB
-
 ## Estrutura do Repositório
 
 - **Seção 4**: Estrutura Sequencial
@@ -43,13 +18,27 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - **Seção 17**: Generics, Set e Map
 - **Seção 18**: Programação funcional e expressões lambda
 - **Seção 19**: Acesso a banco de dados com JDBC e DAO (Data Access Object)
+- **Seção 20**: Git e GitHub
+- **Seção 21**: JPA e Hibernate
 
-## Tecnologias 
-
+### Tecnologias, Frameworks e Ferramentas
 - Java 17
-- Git
+- Spring Boot
 - UML
 - MySQL
+- JDBC (SQL)
+- JavaFX (Interface gráfica)
+- Git/Github
+- JPA/Hibernate
+- Maven
+- Spring Data JPA
+- Spring Data MongoDB
+- Apache Tomcat
+- Postman
+- Xampp
+- H2
+- PostgreSQL
+- Heroku
 
 ## Professor
 
