@@ -46,7 +46,7 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - **Seção 20**: Git e GitHub
 - **Seção 21**: JPA
 
-## Tecnologias 
+## Tecnologias & Ferramentas
 
 - Java 17
 - Git
