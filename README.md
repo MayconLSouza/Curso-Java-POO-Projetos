@@ -53,6 +53,10 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - UML
 - MySQL
 - Maven
+- Spring Boot
+- Apache Tomcat
+- Postman
+- Xampp
 
 ## Professor
 
