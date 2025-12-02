@@ -39,7 +39,6 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - Postman
 - Xampp
 - H2
-- PostgreSQL
 
 ## Professor
 
