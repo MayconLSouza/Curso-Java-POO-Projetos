@@ -21,6 +21,7 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - **Seção 20**: Git e GitHub
 - **Seção 21**: JPA e Hibernate
 - **Seção 22**: Web Services com Spring Boot
+- **Seção 23**: Projeto Sistema Jogo de Xadrez
 
 ### Tecnologias, Frameworks e Ferramentas
 - Java 17
@@ -39,7 +40,6 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - Xampp
 - H2
 - PostgreSQL
-- Heroku
 
 ## Professor
 
