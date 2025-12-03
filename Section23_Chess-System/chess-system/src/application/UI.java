@@ -30,11 +30,19 @@ public class UI {
 	public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
 	public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
-    // https://stackoverflow.com/questions/2979383/java-clear-the-console
     public static void clearScreen() 
     {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        try {
+            if (System.getProperty("os.name").contains("Windows")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                System.out.print("\u001B[H\u001B[2J");
+                System.out.flush();
+            }
+        } catch (Exception e) {
+            System.out.print("\u001B[H\u001B[2J");
+            System.out.flush();
+        }
     }
 
     public static ChessPosition readChessPosition(Scanner sc)
