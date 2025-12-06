@@ -5,12 +5,40 @@ import boardgame.Position;
 import chess.ChessPiece;
 import chess.Color;
 
+/**
+ * Pawn chess piece implementation.
+ * <p>
+ * The pawn moves forward one square (two on its first move) and captures
+ * diagonally. This class computes the pawn's possible moves according to
+ * its color and current position on the board.
+ * </p>
+ */
 public class Pawn extends ChessPiece {
 
+    /**
+     * Creates a pawn associated with the given board and color.
+     * @param board the board where the pawn is placed
+     * @param color the pawn color (WHITE or BLACK)
+     */
     public Pawn(Board board, Color color) {
         super(board, color);
     }
 
+     /**
+     * Returns the pawn symbol used in board printing.
+     * @return the string "P"
+     */
+    @Override
+    public String toString() {
+        return "P";
+    }
+
+    /**
+     * Calculates and returns the pawn's possible moves as a boolean matrix.
+     * The matrix dimensions match the board; `true` entries indicate allowed
+     * target squares for the pawn given the current position and board state.
+     * @return boolean matrix [rows][columns] with possible moves for this pawn
+     */
     @Override
     public boolean[][] possibleMoves() {
         boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
@@ -71,10 +99,5 @@ public class Pawn extends ChessPiece {
         }
 
         return mat;
-    }
-
-    @Override
-    public String toString() {
-        return "P";
     }
 }
