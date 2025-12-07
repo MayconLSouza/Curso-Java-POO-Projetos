@@ -29,6 +29,7 @@ public class ChessMatch {
     private boolean check;
     private boolean checkMate;
     private ChessPiece enPassantVulnerable;
+    private ChessPiece promoted;
 
     /**
      * Initializes a new chess match with an 8x8 board, starting turn and
@@ -103,6 +104,15 @@ public class ChessMatch {
     }
 
     /**
+    * Gets the pawn that was promoted in the last move.
+    * @return the promoted piece, or `null` if no promotion occurred
+    */
+    public ChessPiece getPromoted()
+    {
+        return promoted;
+    }
+
+    /**
      * Returns a boolean matrix with the possible moves for the piece
      * located at `sourcePosition`.
      * @param sourcePosition the piece position in chess notation (column, row)
@@ -123,6 +133,7 @@ public class ChessMatch {
      * game state (check, checkmate and turn).
      * <p>
      * Also handles special move state updates including:
+     * - Pawn promotion when reaching the opposite end of the board
      * - Setting the en passant vulnerable pawn after a two-square pawn move
      * </p>
      * @param sourcePosition source position in chess notation
@@ -147,6 +158,17 @@ public class ChessMatch {
 
         ChessPiece movedPiece = (ChessPiece) board.piece(target);
 
+        // Special move: promotion
+        promoted = null;
+        if(movedPiece instanceof Pawn)
+        {
+            if(movedPiece.getColor() == Color.WHITE && target.getRow() == 0 || movedPiece.getColor() == Color.BLACK && target.getRow() == 7)
+            {
+                promoted = (ChessPiece) board.piece(target);
+                promoted = replacePromotedPiece("Q");
+            }
+        }
+
         check = testCheck(opponent(currentPlayer));
 
         if(testCheckMate(opponent(currentPlayer)))
@@ -169,6 +191,60 @@ public class ChessMatch {
         }
 
         return (ChessPiece) capturedPiece;
+    }
+
+     /**
+     * Replaces a promoted pawn with a new piece of the specified type.
+     * <p>
+     * Valid promotion piece types are:
+     * - "Q" for Queen
+     * - "R" for Rook
+     * - "B" for Bishop
+     * - "N" for Knight
+     * </p>
+     * <p>
+     * If an invalid type is provided, the method returns the original promoted piece (Queen)
+     * without making any changes.
+     * </p>
+     * @param type the type of piece to promote to (Q, R, B, or N)
+     * @return the new promoted piece, or the original piece if type is invalid
+     * @throws IllegalStateException if there is no piece to be promoted
+     */
+    public ChessPiece replacePromotedPiece(String type) 
+    {
+        if(promoted == null)
+        {
+            throw new IllegalStateException("There is no piece to be promoted.");
+        }
+        if(!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q"))
+        {
+            return promoted;
+        }
+
+        Position pos = promoted.getChessPosition().toPosition();
+        Piece p = board.removePiece(pos);
+        piecesOnTheBoard.remove(p);
+
+        ChessPiece newPiece = newPiece(type, promoted.getColor());
+        board.placePiece(newPiece, pos);
+        piecesOnTheBoard.add(newPiece);
+
+        return newPiece;
+    }
+
+    /**
+     * Creates a new chess piece of the specified type and color.
+     * Used for pawn promotion to generate the new piece.
+     * @param type the type of piece to create (B, N, Q, or R)
+     * @param color the color of the new piece
+     * @return the newly created chess piece
+     */
+    private ChessPiece newPiece(String type, Color color)
+    {
+        if(type.equals("B")) return new Bishop(board, color);
+        if(type.equals("N")) return new Knight(board, color);
+        if(type.equals("Q")) return new Queen(board, color);
+        return new Rook(board, color);
     }
 
      /**
