@@ -1,6 +1,5 @@
 package application;
 
-import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -11,7 +10,30 @@ import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
 
+/**
+ * Main entry point for the chess game application.
+ * <p>
+ * This class contains the main game loop that drives the chess match.
+ * It handles user input, displays the game state, and manages the flow
+ * of the game including moves, captures, and pawn promotion.
+ * </p>
+ */
 public class Program {
+     
+    /**
+     * Main method that runs the chess game.
+     * <p>
+     * The game loop continues until checkmate is reached. Each iteration:
+     * 1. Clears the screen and displays the current game state
+     * 2. Prompts for source and target positions
+     * 3. Shows possible moves for the selected piece
+     * 4. Executes the move and handles captures
+     * 5. Manages pawn promotion when applicable
+     * </p>
+     * 
+     * @param args command-line arguments (not used)
+     * @throws Exception if any unexpected error occurs during execution
+     */
     public static void main(String[] args) throws Exception {
 
         Scanner sc = new Scanner(System.in);

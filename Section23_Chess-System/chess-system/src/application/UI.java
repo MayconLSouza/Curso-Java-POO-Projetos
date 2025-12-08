@@ -11,9 +11,18 @@ import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
 
+/**
+ * User Interface class for the chess game console application.
+ * <p>
+ * This class provides methods for displaying the chess board, reading user input,
+ * and printing game status information. It handles console colors and screen
+ * clearing for different operating systems.
+ * </p>
+ */
 public class UI {
 
-    // https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println
+    // ANSI escape codes for console colors
+    // Source: https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println
 
 	public static final String ANSI_RESET = "\u001B[0m";
 	public static final String ANSI_BLACK = "\u001B[30m";
@@ -34,6 +43,14 @@ public class UI {
 	public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
 	public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
+    /**
+     * Clears the console screen.
+     * <p>
+     * This method uses different commands for Windows and Unix-like systems
+     * (Linux, macOS) to clear the console. It falls back to ANSI escape codes
+     * if the platform-specific command fails.
+     * </p>
+     */
     public static void clearScreen() 
     {
         try {
@@ -49,6 +66,17 @@ public class UI {
         }
     }
 
+    /**
+     * Reads a chess position from user input.
+     * <p>
+     * Expects input in algebraic notation (e.g., "e4", "a1"). The input
+     * should consist of a letter (a-h) followed by a number (1-8).
+     * </p>
+     * 
+     * @param sc the Scanner object to read input from
+     * @return the parsed ChessPosition
+     * @throws InputMismatchException if the input format is invalid
+     */
     public static ChessPosition readChessPosition(Scanner sc)
     {
         try 
@@ -64,6 +92,12 @@ public class UI {
         }
     }
 
+    /**
+     * Prints the current match state including board, captured pieces, and game status.
+     * 
+     * @param chessMatch the current chess match
+     * @param captured the list of captured pieces
+     */
     public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured)
     {
         printBoard(chessMatch.getPieces());
@@ -88,6 +122,11 @@ public class UI {
         }
     }
 
+    /**
+     * Prints the chess board with pieces in their current positions.
+     * 
+     * @param pieces the 2D array of chess pieces representing the board
+     */
     public static void printBoard(ChessPiece[][] pieces) {
         for (int i = 0; i < pieces.length; i++) {
             System.out.print((8 - i) + " ");
@@ -99,6 +138,15 @@ public class UI {
         System.out.println("  a b c d e f g h");
     }
 
+    /**
+     * Prints the chess board with possible moves highlighted.
+     * <p>
+     * This version is used when showing available moves for a selected piece.
+     * </p>
+     * 
+     * @param pieces the 2D array of chess pieces representing the board
+     * @param possibleMoves boolean matrix indicating valid move positions
+     */
     public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves) {
         for (int i = 0; i < pieces.length; i++) {
             System.out.print((8 - i) + " ");
@@ -110,6 +158,16 @@ public class UI {
         System.out.println("  a b c d e f g h");
     }
 
+    /**
+     * Prints a single chess piece with optional background highlighting.
+     * <p>
+     * White pieces are displayed in white, black pieces in yellow.
+     * Empty squares are shown as "-". Possible move squares have a blue background.
+     * </p>
+     * 
+     * @param piece the chess piece to print (or `null` for empty square)
+     * @param background `true` to highlight with blue background for possible moves
+     */
     private static void printPiece(ChessPiece piece, boolean background) {
         if (background) 
         {
@@ -128,6 +186,11 @@ public class UI {
         System.out.print(" ");
     }
 
+    /**
+     * Prints the lists of captured pieces separated by color.
+     * 
+     * @param captured the list of all captured pieces
+     */
     private static void printCapturedPieces(List<ChessPiece> captured)
     {
         List<ChessPiece> white = captured.stream().filter(x -> x.getColor() == Color.WHITE).collect(Collectors.toList());
