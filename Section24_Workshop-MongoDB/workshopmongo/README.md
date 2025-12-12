@@ -14,13 +14,16 @@
 │   │   │           └── 📁 workshopmongo
 │   │   │               ├── 📁 domain
 │   │   │               │   └── ☕ User.java
+│   │   │               ├── 📁 repository
+│   │   │               │   └── ☕ UserRepository.java
 │   │   │               ├── 📁 resources
 │   │   │               │   └── ☕ UserResource.java
+│   │   │               ├── 📁 services
+│   │   │               │   └── ☕ UserService.java
 │   │   │               └── ☕ WorkshopmongoApplication.java
 │   │   └── 📁 resources
 │   │       ├── 📁 static
-│   │       ├── 📁 templates
-│   │       └── 📄 application.properties
+│   │       └── 📁 templates
 │   └── 📁 test
 │       └── 📁 java
 │           └── 📁 com
@@ -29,6 +32,7 @@
 │                       └── ☕ WorkshopmongoApplicationTests.java
 ├── ⚙️ .gitattributes
 ├── ⚙️ .gitignore
+├── 📝 README.md
 ├── 📄 mvnw
 ├── 📄 mvnw.cmd
 └── ⚙️ pom.xml
