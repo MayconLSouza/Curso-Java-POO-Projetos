@@ -3,9 +3,6 @@
 ```
 ├── 📁 .mvn
 │   └── 📁 wrapper
-│       └── 📄 maven-wrapper.properties
-├── 📁 postman
-│   └── ⚙️ Workshop-MongoDB.postman_collection.json
 ├── 📁 src
 │   ├── 📁 main
 │   │   ├── 📁 java
