@@ -22,10 +22,12 @@
 │   │                   │   ├── 📁 exception
 │   │                   │   │   ├── ☕ ResourceExceptionHandler.java
 │   │                   │   │   └── ☕ StandardError.java
+│   │                   │   ├── ☕ PostResource.java
 │   │                   │   └── ☕ UserResource.java
 │   │                   ├── 📁 services
 │   │                   │   ├── 📁 exception
 │   │                   │   │   └── ☕ ObjectNotFoundException.java
+│   │                   │   ├── ☕ PostService.java
 │   │                   │   └── ☕ UserService.java
 │   │                   └── ☕ WorkshopmongoApplication.java
 │   └── 📁 test
