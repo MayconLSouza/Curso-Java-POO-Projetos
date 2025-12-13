@@ -14,6 +14,7 @@
 │   │                   │   └── ☕ User.java
 │   │                   ├── 📁 dto
 │   │                   │   ├── ☕ AuthorDTO.java
+│   │                   │   ├── ☕ CommentDTO.java
 │   │                   │   └── ☕ UserDTO.java
 │   │                   ├── 📁 repository
 │   │                   │   ├── ☕ PostRepository.java
