@@ -16,8 +16,13 @@
 │   │   │               ├── 📁 repository
 │   │   │               │   └── ☕ UserRepository.java
 │   │   │               ├── 📁 resources
+│   │   │               │   ├── 📁 exception
+│   │   │               │   │   ├── ☕ ResourceExceptionHandler.java
+│   │   │               │   │   └── ☕ StandardError.java
 │   │   │               │   └── ☕ UserResource.java
 │   │   │               ├── 📁 services
+│   │   │               │   ├── 📁 exception
+│   │   │               │   │   └── ☕ ObjectNotFoundException.java
 │   │   │               │   └── ☕ UserService.java
 │   │   │               └── ☕ WorkshopmongoApplication.java
 │   │   └── 📁 resources
