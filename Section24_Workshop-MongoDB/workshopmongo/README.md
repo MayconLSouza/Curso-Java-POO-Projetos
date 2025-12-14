@@ -23,6 +23,8 @@
 │   │                   │   ├── 📁 exception
 │   │                   │   │   ├── ☕ ResourceExceptionHandler.java
 │   │                   │   │   └── ☕ StandardError.java
+│   │                   │   ├── 📁 util
+│   │                   │   │   └── ☕ URL.java
 │   │                   │   ├── ☕ PostResource.java
 │   │                   │   └── ☕ UserResource.java
 │   │                   ├── 📁 services
