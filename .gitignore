@@ -36,3 +36,12 @@ hs_err_pid*
 
 # Database info
 **/db.properties
+
+# build folders
+bin/
+target/
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
