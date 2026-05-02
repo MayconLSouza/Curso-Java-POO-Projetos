@@ -23,6 +23,7 @@ Este repositório contém exercícios e projetos desenvolvidos durante o curso "
 - **Seção 22**: Web Services com Spring Boot
 - **Seção 23**: Projeto Sistema Jogo de Xadrez
 - **Seção 24**: Projeto Spring Boot e MongoDB (web services + NoSQL)
+- **Seção 25**: Projeto JavaFX com JDBC
 
 ### Tecnologias, Frameworks e Ferramentas
 - Java 17
