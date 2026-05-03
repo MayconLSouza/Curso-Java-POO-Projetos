@@ -173,7 +173,7 @@ public class SellerDaoJDBC implements GenericDao<Seller>, SellerDao {
 		s.setId(rs.getInt("Id"));
 		s.setName(rs.getString("Name"));
 		s.setEmail(rs.getString("Email"));
-		s.setBirthDate(rs.getDate("BirthDate"));
+		s.setBirthDate(new java.util.Date(rs.getTimestamp("BirthDate").getTime()));
 		s.setBaseSalary(rs.getDouble("BaseSalary"));
 		s.setDepartment(dep);
 
