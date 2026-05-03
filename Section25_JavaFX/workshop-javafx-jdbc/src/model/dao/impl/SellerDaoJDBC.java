@@ -1,6 +1,6 @@
 package model.dao.impl;
 
-import java.sql.Connection;
+import java.sql.Connection; 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -36,7 +36,7 @@ public class SellerDaoJDBC implements GenericDao<Seller>, SellerDao {
 
 			ps.setString(1, s.getName());
 			ps.setString(2, s.getEmail());
-			ps.setDate(3, java.sql.Date.valueOf(s.getBirthDate()));
+			ps.setDate(3, new java.sql.Date(s.getBirthDate().getTime()));
 			ps.setDouble(4, s.getBaseSalary());
 			ps.setInt(5, s.getDepartment().getId());
 
@@ -70,7 +70,7 @@ public class SellerDaoJDBC implements GenericDao<Seller>, SellerDao {
 
 			ps.setString(1, s.getName());
 			ps.setString(2, s.getEmail());
-			ps.setDate(3, java.sql.Date.valueOf(s.getBirthDate()));
+			ps.setDate(3, new java.sql.Date(s.getBirthDate().getTime()));
 			ps.setDouble(4, s.getBaseSalary());
 			ps.setInt(5, s.getDepartment().getId());
 			ps.setInt(6, s.getId());
@@ -173,7 +173,7 @@ public class SellerDaoJDBC implements GenericDao<Seller>, SellerDao {
 		s.setId(rs.getInt("Id"));
 		s.setName(rs.getString("Name"));
 		s.setEmail(rs.getString("Email"));
-		s.setBirthDate(rs.getDate("BirthDate").toLocalDate());
+		s.setBirthDate(rs.getDate("BirthDate"));
 		s.setBaseSalary(rs.getDouble("BaseSalary"));
 		s.setDepartment(dep);
 
